@@ -1,6 +1,13 @@
 import Vapor
 
 func calculate_score(choices: Array<Job>) -> Array<Job> {
+    //TODO: Compute Average Score across all
+    
+    //TODO: Compute score against average for each factor
+    
+    //TODO: Compute score based on importance of each factor
+    //TODO: Find percentile score based on average of other scores
+    
     let choices = choices.sorted(by: {$0.pay > $1.pay})
     print(choices)
     return choices
