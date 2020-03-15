@@ -1,5 +1,11 @@
 import Vapor
 
+func calculate_score(choices: Array<Job>) -> Array<Job> {
+    let choices = choices.sorted(by: {$0.pay > $1.pay})
+    print(choices)
+    return choices
+}
+
 final class CompareController {
     /// Returns a list of all `Todo`s.
     func index(_ req: Request) throws -> [Job] {
